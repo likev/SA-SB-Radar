@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "二进制文件读写", "二进制文件读写\二进制文件读写.vcxproj", "{9C79694F-54F3-46B5-A1C7-AE7ED445F9F2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SA-SB-雷达基数据读取", "SA-SB-雷达基数据读取\SA-SB-雷达基数据读取.vcxproj", "{414A1B89-4B3A-4B3B-88A1-BBCAEAD4C196}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CImg-Use", "CImg-Use\CImg-Use.vcxproj", "{5D5A04C8-15E4-45B1-B4D8-05225D7F98DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C79694F-54F3-46B5-A1C7-AE7ED445F9F2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9C79694F-54F3-46B5-A1C7-AE7ED445F9F2}.Debug|Win32.Build.0 = Debug|Win32
+		{9C79694F-54F3-46B5-A1C7-AE7ED445F9F2}.Release|Win32.ActiveCfg = Release|Win32
+		{9C79694F-54F3-46B5-A1C7-AE7ED445F9F2}.Release|Win32.Build.0 = Release|Win32
+		{414A1B89-4B3A-4B3B-88A1-BBCAEAD4C196}.Debug|Win32.ActiveCfg = Debug|Win32
+		{414A1B89-4B3A-4B3B-88A1-BBCAEAD4C196}.Debug|Win32.Build.0 = Debug|Win32
+		{414A1B89-4B3A-4B3B-88A1-BBCAEAD4C196}.Release|Win32.ActiveCfg = Release|Win32
+		{414A1B89-4B3A-4B3B-88A1-BBCAEAD4C196}.Release|Win32.Build.0 = Release|Win32
+		{5D5A04C8-15E4-45B1-B4D8-05225D7F98DF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5D5A04C8-15E4-45B1-B4D8-05225D7F98DF}.Debug|Win32.Build.0 = Debug|Win32
+		{5D5A04C8-15E4-45B1-B4D8-05225D7F98DF}.Release|Win32.ActiveCfg = Release|Win32
+		{5D5A04C8-15E4-45B1-B4D8-05225D7F98DF}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
