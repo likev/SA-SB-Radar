@@ -1,11 +1,17 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual C++ Express 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2013 for Windows Desktop
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "二进制文件读写", "二进制文件读写\二进制文件读写.vcxproj", "{9C79694F-54F3-46B5-A1C7-AE7ED445F9F2}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SA-SB-雷达基数据读取", "SA-SB-雷达基数据读取\SA-SB-雷达基数据读取.vcxproj", "{414A1B89-4B3A-4B3B-88A1-BBCAEAD4C196}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CImg-Use", "CImg-Use\CImg-Use.vcxproj", "{5D5A04C8-15E4-45B1-B4D8-05225D7F98DF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "利用zlib-libpng-CImg生成png雷达拼图", "CImg-Use\CImg-Use.vcxproj", "{5D5A04C8-15E4-45B1-B4D8-05225D7F98DF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libbzip2-simple", "libbzip2-simple\libbzip2-simple.vcxproj", "{76B016E2-C32D-4145-990E-1934FFE77CF4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UploadFileInterval", "UploadFileInterval\UploadFileInterval.vcxproj", "{689605B4-2135-441B-9A08-70FFCDD0AF3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +31,14 @@ Global
 		{5D5A04C8-15E4-45B1-B4D8-05225D7F98DF}.Debug|Win32.Build.0 = Debug|Win32
 		{5D5A04C8-15E4-45B1-B4D8-05225D7F98DF}.Release|Win32.ActiveCfg = Release|Win32
 		{5D5A04C8-15E4-45B1-B4D8-05225D7F98DF}.Release|Win32.Build.0 = Release|Win32
+		{76B016E2-C32D-4145-990E-1934FFE77CF4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{76B016E2-C32D-4145-990E-1934FFE77CF4}.Debug|Win32.Build.0 = Debug|Win32
+		{76B016E2-C32D-4145-990E-1934FFE77CF4}.Release|Win32.ActiveCfg = Release|Win32
+		{76B016E2-C32D-4145-990E-1934FFE77CF4}.Release|Win32.Build.0 = Release|Win32
+		{689605B4-2135-441B-9A08-70FFCDD0AF3C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{689605B4-2135-441B-9A08-70FFCDD0AF3C}.Debug|Win32.Build.0 = Debug|Win32
+		{689605B4-2135-441B-9A08-70FFCDD0AF3C}.Release|Win32.ActiveCfg = Release|Win32
+		{689605B4-2135-441B-9A08-70FFCDD0AF3C}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

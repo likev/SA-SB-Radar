@@ -31,8 +31,6 @@
 #define VALUE_RANFOLD  999.		//实际值中的特殊标记,表示有距离模糊
 #define VALUE_AINVALID -1;
 
-#define RADIAN  3.14159/180.
-#define PI 3.14159
 //////////////////////////////////////////////////////////////////////
 //雷达基数据结构
 template <unsigned RGates_VGates_WGates>
@@ -104,6 +102,8 @@ public:
 	double r_first_distance, vw_first_distance;
 
 	int v_resolution;
+
+	int date_begin, date_end, seconds_begin, seconds_end;
 public:
 	RadarElevation():
 		r_valid(false), v_valid(false), w_valid(false)
@@ -261,6 +261,8 @@ public:
 public:
 	std::vector<SB_Base> alldata;
 
+	int date_begin, date_end, seconds_begin, seconds_end;
+
 	class compare_by_double
 	{
 	public:
@@ -274,7 +276,7 @@ public:
 		}
 	};
 	std::map<std::string, RadarElevation, compare_by_double> elevations;
-
+	typedef std::map<std::string, RadarElevation, compare_by_double>::iterator r_it;
 public:
 	SA_SB_Info()
 	{};
@@ -406,7 +408,8 @@ private:
 			switch(it->RadialStatus)
 			{
 			case VOL_BEG:
-
+				date_begin = it->JulianDate;
+				seconds_begin = it->mSeconds;
 			case ELV_BEG:  //仰角开始
 				angle = int(trans_angle(it->El)*10+0.5)/10.0;
 				cur_el = trans_to_el(angle);
@@ -415,6 +418,9 @@ private:
 				
 				if(it->PtrOfReflectivity)
 				{
+					elevations[cur_el].date_begin = it->JulianDate;
+					elevations[cur_el].seconds_begin = it->mSeconds;
+
 					elevations[cur_el].set_r_gate_count(it->GatesNumberOfReflectivity);
 
 					elevations[cur_el].r_gate_length = it->GateSizeOfReflectivity;
@@ -448,9 +454,15 @@ private:
 				break;
 
 			case VOL_END:
-				  break;
+				date_end = it->JulianDate;
+				seconds_end = it->mSeconds;
 
 			case ELV_END:
+				if(it->PtrOfReflectivity)
+				{
+					elevations[cur_el].date_end = it->JulianDate;
+					elevations[cur_el].seconds_end = it->mSeconds;
+				}
 				  break;
 			case ELV_NORMAL:
 				break;
