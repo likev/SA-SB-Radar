@@ -18,26 +18,5 @@
     <ClCompile Include="simple1.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="blocksort.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="bzlib.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="compress.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="crctable.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="decompress.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="huffman.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="randtable.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>

@@ -126,7 +126,11 @@ int use_low_level_interface()
 
 	BZ2_bzDecompressEnd(&bsread);
 
+	radar.init_elevs();
+
 	std::cout << "sizeof(RadarBaseData):" << sizeof(SA_SB_Info::SB_Base) << std::endl;
+	std::cout << "date_begin:" << radar.date_begin << " date_end:" << radar.date_end << std::endl;
+	std::cout << "seconds_begin:" << radar.seconds_begin << " seconds_end:" << radar.seconds_begin << std::endl;
 
 	std::ofstream fout("log2.txt");
 
@@ -146,6 +150,8 @@ void read_base_data()
 	radar.read_base_data(filename);
 
 	std::cout << "sizeof(RadarBaseData):" << sizeof(SA_SB_Info::SB_Base) << std::endl;
+	std::cout << "date_begin:" << radar.date_begin << " date_end:" << radar.date_end << std::endl;
+	std::cout << "seconds_begin:" << radar.seconds_begin << " seconds_end:" << radar.seconds_begin << std::endl;
 
 	std::ofstream fout("log1.txt");
 

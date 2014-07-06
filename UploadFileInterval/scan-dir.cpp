@@ -1,7 +1,8 @@
-#include <iostream>
-#include <string>
-#include <sstream>
-#include <algorithm>
+
+
+#include "config.h"
+#include "radar.h"
+#include "postfile.h"
 
 #include "Poco/Glob.h"
 #include "Poco/File.h"
@@ -9,45 +10,15 @@
 #include "Poco/Exception.h"
 #include "Poco/Util/XMLConfiguration.h"
 
-
-	
-std::string getLastTimeStr(const std::string & dir)
-{
-	Poco::AutoPtr<Poco::Util::XMLConfiguration>
-		pConf(new Poco::Util::XMLConfiguration("radar-config.xml"));
-
-	return pConf->getString("lasttime." + dir, "0");
-}
-
-std::vector<std::string> & getDirList(std::vector<std::string> & dirs)
-{
-	Poco::AutoPtr<Poco::Util::XMLConfiguration>
-		pConf(new Poco::Util::XMLConfiguration("radar-config.xml"));
-
-	int count = pConf->getInt("dircount");
-
-	for (int i = 0; i<count; i++)
-	{
-		//dirs.push_back(pConf->getString("dirname[" + to_string(i) + "]"));
-	}
-	return dirs;
-}
-
-void setLastTimeStr(const std::string & dir, const std::string & timestr)
-{
-	Poco::AutoPtr<Poco::Util::XMLConfiguration>
-		pConf(new Poco::Util::XMLConfiguration("radar-config.xml"));
-
-	pConf->setString("lasttime." + dir, timestr);
-	pConf->save("radar-config.xml");
-}
+#include <iostream>
+#include <string>
+#include <sstream>
+#include <algorithm>
 
 
-void post_file(Poco::File& cur)
-{
 
 
-}
+
 
 template <typename T>
 std::string to_string(const T& org)
@@ -67,57 +38,43 @@ bool check_file(Poco::File& cur)
 	return false;
 }
 
-//class CmpByLastModified
-//{
-	bool CmpByLastModified(const std::string& left,
-							const std::string& right)
-	{
-		Poco::File leftf(left), rightf(right);
 
-		return leftf.getLastModified() < rightf.getLastModified();
+bool CmpByLastModified(const std::string& left,
+	const std::string& right)
+{
+	Poco::File leftf(left), rightf(right);
 
-	}
-//};
+	return leftf.getLastModified() < rightf.getLastModified();
+
+}
 
 
 
-
+void handle_file(Poco::File& cur)
+{
+	UploadInfo upinfo;
+	generate_pngdata( cur, upinfo );
+	
+	post_file(upinfo);
+}
 
 
 void scan_dir(const std::string & dir)
 {
-	Poco::AutoPtr<Poco::Util::XMLConfiguration>
-		pConf(new Poco::Util::XMLConfiguration("radar-config.xml"));
-
 	//"dirtest/*.txt";
-	std::string path = pConf->getString("path." + dir, "dirtest/*.txt");
+	std::string path = getScanPath(dir);
 
 
 	using Poco::Glob;
 
 	std::set<std::string> files;
-	
 
 	Glob::glob(path.c_str(), files);
+
+
 	std::vector<std::string> vfiles(files.begin(), files.end());
 
 	std::sort(vfiles.begin(), vfiles.end(), CmpByLastModified);
-
-	// Glob::glob("/usr/include/*/*.h", files);
-
-	//auto it = files.begin();
-	//for (; it != files.end(); ++it)
-	//{
-	//	std::cout << *it << std::endl;
-	//	Poco::File cur(*it);
-	//	std::cout<<cur.getLastModified().epochTime()<<std::endl;
-
-	//	if (check_file(cur))
-	//	{
-	//		post_file(cur);
-	//	}
-
-	//}
 
 	auto it2 = vfiles.begin();
 	for (; it2 != vfiles.end(); ++it2)
@@ -126,14 +83,11 @@ void scan_dir(const std::string & dir)
 
 		if (check_file(cur))
 		{
-			std::cout << *it2 << std::endl;
+			std::cout << "\n发现新文件:" << cur.path();
+			handle_file(cur);
 			
-			
-			time_t t = cur.getLastModified().epochTime();
-			std::cout << t << std::endl;
-			post_file(cur);
 
-			setLastTimeStr("sanmenxia", to_string(t));
+			setLastTimeStr("sanmenxia", to_string(cur.getLastModified().epochTime() ) );
 		}
 
 	}
@@ -142,6 +96,8 @@ void scan_dir(const std::string & dir)
 
 int main()
 {
+	curl_global_init(CURL_GLOBAL_ALL);
+	
 	while (true)
 	{
 		try
@@ -161,6 +117,6 @@ int main()
 		Poco::Thread::sleep(1000 * wait);
 	}
 
-	
+	curl_global_cleanup();
 	return 0;
 }

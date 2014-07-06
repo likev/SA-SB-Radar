@@ -18,5 +18,25 @@
     <ClCompile Include="scan-dir.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="config.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="radar.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="postfile.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="radar.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="postfile.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
