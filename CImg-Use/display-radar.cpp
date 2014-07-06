@@ -1,9 +1,9 @@
-#include "SA-SBDataStruct.h"
+#include "radar/SA-SBDataStruct.h"
 
 #define M_PI 3.14159265358979323846
 
 #define cimg_use_png
-#include "CImg.h"
+#include "CImg/CImg.h"
 
 using namespace cimg_library;
 

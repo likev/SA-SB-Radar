@@ -1,8 +1,11 @@
+
+#include "bzip2/bzlib.h"
+#include "radar/SA-SBDataStruct.h"
+
 #include <iostream>
 #include <fstream>
 #include <string>
 
-#include "bzlib.h"
 
 int use_high_level_interface()
 {
@@ -61,15 +64,15 @@ int use_high_level_interface()
 int use_low_level_interface()
 {
 	//定义两个字符串分别用来存储压缩字符流 和 输出字符流
-	std::string instr(200,' '), outstr;
+	std::string instr(10*1024*1024, ' '), outstr;
 	//instr = std::string(100, 'a') + std::string(100, 'b');
 	
 	//将压缩文件读入instr 压缩前原文件包含100个a和100个b
-	std::ifstream fin("100ab.txt.bz2", std::ios_base::in | std::ios_base::binary);
+	std::ifstream fin("Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin.bz2", std::ios_base::in | std::ios_base::binary);
 	fin.read(&*instr.begin(), instr.size());
 	
 	instr.resize(fin.gcount());
-	std::cout <<"压缩后字符串:"<<instr;
+	//std::cout <<"压缩后字符串:"<<instr;
 
 	fin.close();
 
@@ -91,38 +94,69 @@ int use_low_level_interface()
 	bsread.avail_in = instr.size();
 	bsread.next_in = &*instr.begin();
 
-	bsread.avail_out = 70;//outstr.size()
-	bsread.next_out = &*outstr.begin();	
+	SA_SB_Info radar;
+
+	SA_SB_Info::SB_Base basestruct;
+
+	bsread.avail_out = sizeof(basestruct);//outstr.size()
+	bsread.next_out = (char*)(&basestruct);
 	
 	
 	do{//循环解压 每次解压最多70字节存入outstr并输出
 
 	ret = BZ2_bzDecompress(&bsread);
 	
-	std::cout << "\n bsread.total_out_hi32:" << bsread.total_out_hi32
-		<< "\n bsread.total_out_lo32:" << bsread.total_out_lo32;
-	std::cout << " ret:" << ret;
+	//std::cout << "\n bsread.total_out_hi32:" << bsread.total_out_hi32
+	//	<< "\n bsread.total_out_lo32:" << bsread.total_out_lo32;
+	//std::cout << " ret:" << ret;
 
-	std::cout << '\n' << outstr.substr(0, bsread.total_out_lo32 - last_total_out);
+	//std::cout << '\n' << outstr.substr(0, bsread.total_out_lo32 - last_total_out);
 
-	last_total_out = bsread.total_out_lo32;
+	//last_total_out = bsread.total_out_lo32;
 
 	//BZ2_bzDecompress函数每次执行后自动设置avail_in next_in avail_out next_out
 	//比如第一次执行到此位置时 avail_in==10 avail_out=0 
-	bsread.avail_out = 70;
-	bsread.next_out = &(*outstr.begin() );
+	bsread.avail_out = sizeof(basestruct);
+	bsread.next_out = (char*)(&basestruct);
+
+	radar.alldata.push_back(basestruct);
+
 
 	} while (ret == BZ_OK);
 
 	BZ2_bzDecompressEnd(&bsread);
+
+	std::cout << "sizeof(RadarBaseData):" << sizeof(SA_SB_Info::SB_Base) << std::endl;
+
+	std::ofstream fout("log2.txt");
+
+	radar.out_info(fout);
+	fout.close();
 	
 	return 0;
 	
 }
 
+void read_base_data()
+{
+	std::string filename = "Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin";
+
+	SA_SB_Info radar;
+
+	radar.read_base_data(filename);
+
+	std::cout << "sizeof(RadarBaseData):" << sizeof(SA_SB_Info::SB_Base) << std::endl;
+
+	std::ofstream fout("log1.txt");
+
+	radar.out_info(fout);
+	fout.close();
+}
+
 int main()
 {
 	use_low_level_interface();
+	read_base_data();
 
 	return 0;
 }

@@ -1,6 +1,6 @@
 
 #define cimg_use_png
-#include "CImg.h"
+#include "CImg/CImg.h"
 
 using namespace cimg_library;
 
