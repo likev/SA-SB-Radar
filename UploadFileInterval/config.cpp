@@ -1,6 +1,9 @@
 
 #include "config.h"
 #include "Poco/Util/XMLConfiguration.h"
+#include "Poco/DateTime.h"
+#include "Poco/DateTimeFormatter.h"
+#include "Poco/DateTimeFormat.h"
 
 std::string getLastTimeStr(const std::string & dir)
 {
@@ -68,4 +71,14 @@ std::string getPngOutDir()
 	//"dirtest/*.txt";
 	return pConf->getString("pngoutdir", "pngout");
 	
+}
+
+//get_datatime_from_days_milliseconds
+Poco::DateTime get_datatime(int days, int milliseconds)
+{
+	Poco::DateTime begin(Poco::Timestamp(0));
+
+	int hours = milliseconds / (3600 * 1000),
+		microseconds = (milliseconds % (3600 * 1000)) * 1000;
+	return begin + Poco::Timespan(days - 1, hours, 0, 0, microseconds);
 }

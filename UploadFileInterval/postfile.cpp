@@ -54,18 +54,28 @@ bool post_file(UploadInfo& upinfo)
 	
 	for (auto it = upinfo.post_form.begin(); it != upinfo.post_form.end(); it++)
 	{
-		curl_formadd(&formpost, &lastptr, CURLFORM_PTRNAME, it->first, CURLFORM_PTRCONTENTS, it->second, CURLFORM_END);
+		curl_formadd(&formpost, &lastptr, CURLFORM_PTRNAME, it->first.c_str(), CURLFORM_PTRCONTENTS, it->second.c_str(), CURLFORM_END);
 	}
 	
-	for (auto it = upinfo.files.begin(); it != upinfo.files.end(); it++)
+	for (auto it = upinfo.rfiles.begin(); it != upinfo.rfiles.end(); it++)
 	{
-		curl_formadd(&formpost, &lastptr, CURLFORM_PTRNAME, "file[]", CURLFORM_FILE, it->c_str(), CURLFORM_END);
+		curl_formadd(&formpost, &lastptr, CURLFORM_PTRNAME, "rfiles[]", CURLFORM_FILE, it->c_str(), CURLFORM_END);
 	}
 	
 	curl_easy_setopt(curl, CURLOPT_URL, POSTURL.c_str() );
 	curl_easy_setopt(curl, CURLOPT_HTTPPOST, formpost);
 
+	std::string errors(CURL_ERROR_SIZE, ' ');
+	curl_easy_setopt(curl, CURLOPT_ERRORBUFFER, &*errors.begin());
+
 	CURLcode res = curl_easy_perform(curl);
+
+	if (res != CURLE_OK)
+	{
+		std::cout << "post error occur: " << errors<<std::endl;
+		//std::cout <<" curl_easy_strerror:"<< curl_easy_strerror(res) << std::endl;
+		return false;
+	}
 
 	curl_easy_cleanup(curl);
 

@@ -1,9 +1,9 @@
 <app>
 	<uploadurl>http://radaronline.sinaapp.com/post.php</uploadurl>
-	<proxy>0</proxy>
+	<proxy>172.18.172.251:80</proxy>
 	<pngoutdir>pngout</pngoutdir>
 	<lasttime>
-		<sanmenxia>1404533760</sanmenxia>
+		<sanmenxia>1404722709</sanmenxia>
 	</lasttime>
 	<path>
 		<sanmenxia>dirtest/Z_RADR_I_*</sanmenxia>

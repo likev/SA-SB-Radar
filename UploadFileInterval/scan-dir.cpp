@@ -16,10 +16,6 @@
 #include <algorithm>
 
 
-
-
-
-
 template <typename T>
 std::string to_string(const T& org)
 {
@@ -48,16 +44,28 @@ bool CmpByLastModified(const std::string& left,
 
 }
 
-
-
-void handle_file(Poco::File& cur)
+bool handle_file(Poco::File& cur, const std::string & dir)
 {
-	UploadInfo upinfo;
-	generate_pngdata( cur, upinfo );
-	
-	post_file(upinfo);
-}
+	using Poco::DateTime; using Poco::DateTimeFormat; using Poco::DateTimeFormatter;
 
+	bool result = true;
+	UploadInfo upinfo;
+	result = result && generate_pngdata(cur, upinfo);
+
+	DateTime begin = get_datatime(upinfo.date_begin, upinfo.seconds_begin), 
+		end = get_datatime(upinfo.date_end, upinfo.seconds_end);
+
+	
+	upinfo.post_form["radarBeginTime"] = DateTimeFormatter::format(begin, DateTimeFormat::SORTABLE_FORMAT);
+	upinfo.post_form["radarEndTime"] = DateTimeFormatter::format(end, DateTimeFormat::SORTABLE_FORMAT);
+
+	upinfo.post_form["dataPostTime"] = DateTimeFormatter::format(DateTime(), DateTimeFormat::SORTABLE_FORMAT);
+	upinfo.post_form["station"] = dir;
+	
+	result = result && post_file(upinfo);
+
+	return result;
+}
 
 void scan_dir(const std::string & dir)
 {
@@ -76,18 +84,18 @@ void scan_dir(const std::string & dir)
 
 	std::sort(vfiles.begin(), vfiles.end(), CmpByLastModified);
 
-	auto it2 = vfiles.begin();
-	for (; it2 != vfiles.end(); ++it2)
+	for (auto it2 = vfiles.begin(); it2 != vfiles.end(); ++it2)
 	{
 		Poco::File cur(*it2);
 
 		if (check_file(cur))
 		{
 			std::cout << "\n发现新文件:" << cur.path();
-			handle_file(cur);
 			
-
-			setLastTimeStr("sanmenxia", to_string(cur.getLastModified().epochTime() ) );
+			if (handle_file(cur, dir))
+			{
+				setLastTimeStr("sanmenxia", to_string(cur.getLastModified().epochTime() ) );
+			}
 		}
 
 	}

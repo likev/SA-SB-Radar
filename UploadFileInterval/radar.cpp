@@ -17,7 +17,7 @@ using namespace cimg_library;
 #include <string>
 
 
-int read_bz2_file(const std::string& filename, SA_SB_Info& radar)
+bool read_bz2_file(const std::string& filename, SA_SB_Info& radar)
 {
 	//定义两个字符串分别用来存储压缩字符流 和 输出字符流
 	std::string instr(10 * 1024 * 1024, ' ');
@@ -36,10 +36,10 @@ int read_bz2_file(const std::string& filename, SA_SB_Info& radar)
 	bsread.bzalloc = NULL;
 	bsread.bzfree = NULL;
 	bsread.opaque = NULL;
-
-	//初始化bsread 比如设置总输入和输出长度为0 设置压缩状态 
+ 
 	//第二个参数设置解压状态输出 设为0不输出内部状态
-	BZ2_bzDecompressInit(&bsread, 4, 0);
+	int error = BZ2_bzDecompressInit(&bsread, 0, 0);
+	//std::cout << "BZ2_bzDecompressInit return code:" << error << std::endl;
 
 	int ret, last_total_out = 0;
 
@@ -57,7 +57,15 @@ int read_bz2_file(const std::string& filename, SA_SB_Info& radar)
 
 		ret = BZ2_bzDecompress(&bsread);
 
-		radar.alldata.push_back(basestruct);
+		if (ret == BZ_OK || ret == BZ_STREAM_END)
+		{
+			radar.alldata.push_back(basestruct);
+		}
+		else
+		{
+			std::cout << "\n BZ2_bzDecompress error code:" << ret << std::endl;
+			return false;
+		}
 
 
 	} while (ret == BZ_OK);
@@ -75,7 +83,7 @@ int read_bz2_file(const std::string& filename, SA_SB_Info& radar)
 	radar.out_info(fout);
 	fout.close();
 
-	return 0;
+	return true;
 
 }
 
@@ -124,17 +132,22 @@ bool save_png_data(const RadarElevation &el, const std::string &filename)
 
 bool generate_pngdata(Poco::File& cur, UploadInfo& upinfo)
 {
+	bool result = true;
 	SA_SB_Info radar;
 	std::string pathstr = cur.path();
 
 	Poco::Path curpath( pathstr );
 	if (curpath.getExtension() == "bz2")
 	{
-		read_bz2_file(pathstr, radar);
+		if(! read_bz2_file(pathstr, radar) ) return false;
 	}
 	else
 	{
-		radar.read_base_data( pathstr );
+		if (!radar.read_base_data(pathstr))
+		{
+			std::cout << "\n read radar base data error!:" << std::endl;
+			return false;
+		}
 	}
 
 	upinfo.date_begin = radar.date_begin;
@@ -147,15 +160,15 @@ bool generate_pngdata(Poco::File& cur, UploadInfo& upinfo)
 	{
 		if (it->second.r_valid)
 		{
-			std::string outname = getPngOutDir()+'/' + it->first + "data.png";
+			std::string outname = getPngOutDir()+'/' + it->first + "datar.png";
 			
 			save_png_data(it->second, outname);
 
 			upinfo.elevs.push_back(it->first);
-			upinfo.files.push_back(outname);
+			upinfo.rfiles.push_back(outname);
 
 		}
 	}
 
-	return true;
+	return result;
 }

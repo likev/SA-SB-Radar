@@ -231,7 +231,7 @@ void radar_interpolation(std::vector<std::vector<double> > &pixel_coord)
 
 				if(value.size() >= 3)
 				{
-					pixel_coord[i][j] = std::accumulate(value.begin(), value.end(), 0)/value.size();
+					pixel_coord[i][j] = std::accumulate(value.begin(), value.end(), 0.0)/value.size();
 				}
 			}
 		}
