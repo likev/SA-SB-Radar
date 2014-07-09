@@ -1,0 +1,1606 @@
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2<pre><p>_SERVER<br>Array
+(
+    [MEF_PROXY_ADDR] => 10.67.15.12
+    [has_apphash] => 1
+    [ApplimitOutOfCon] => 0
+    [ApplimitOutOfMem] => 0
+    [SCRIPT_URL] => /post.php
+    [SCRIPT_URI] => http://radaronline.sinaapp.com/post.php
+    [HTTP_X_FORWARDED_FOR] => 123.9.229.217, 123.9.229.217
+    [HTTP_HOST] => radaronline.sinaapp.com
+    [HTTP_APPNAME] => radaronline
+    [HTTP_APPVERSION] => 1
+    [HTTP_ACCESSKEY] => zjnw4ylkm4
+    [HTTP_APPHASH] => 868
+    [HTTP_MYSQLPORT] => 0
+    [HTTP_APPCOOKIE] => default_version=1;debug=1;
+    [HTTP_APPSRVC] => 0000000000000000
+    [HTTP_CONNECTION] => close
+    [CONTENT_LENGTH] => 57719
+    [HTTP_ACCEPT] => */*
+    [CONTENT_TYPE] => multipart/form-data; boundary=------------------------2d897bda60906759
+    [PATH] => /usr/local/sae/httpd/bin:/usr/bin:/bin
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache
+    [SERVER_NAME] => radaronline.sinaapp.com
+    [SERVER_ADDR] => 10.67.15.48
+    [SERVER_PORT] => 80
+    [REMOTE_ADDR] => 123.9.229.217
+    [DOCUMENT_ROOT] => /data1/www/htdocs/868/radaronline/1
+    [SERVER_ADMIN] => saesupport@sina.cn
+    [SCRIPT_FILENAME] => /data1/www/htdocs/868/radaronline/1/post.php
+    [REMOTE_PORT] => 37102
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.0
+    [REQUEST_METHOD] => POST
+    [QUERY_STRING] => 
+    [REQUEST_URI] => /post.php
+    [SCRIPT_NAME] => /post.php
+    [PHP_SELF] => /post.php
+    [REQUEST_TIME] => 1404802634
+    [HTTP_SECRETKEY] => Discarded
+)
+<p>_POST<br>Array
+(
+    [dataPostTime] => 2014-07-08 06:57:06
+    [radarBeginTime] => 2014-07-04 08:06:15
+    [radarEndTime] => 2014-07-04 08:12:02
+    [station] => sanmenxia
+)
+<p>_GET<br>Array
+(
+)
+<p>_FILES<br>Array
+(
+    [rfiles] => Array
+        (
+            [name] => Array
+                (
+                    [0] => 0.6datar.png
+                    [1] => 1.3datar.png
+                    [2] => 2.3datar.png
+                    [3] => 3.2datar.png
+                    [4] => 4.2datar.png
+                    [5] => 6.0datar.png
+                    [6] => 9.9datar.png
+                    [7] => 14.5datar.png
+                    [8] => 19.4datar.png
+                )
+
+            [type] => Array
+                (
+                    [0] => application/octet-stream
+                    [1] => application/octet-stream
+                    [2] => application/octet-stream
+                    [3] => application/octet-stream
+                    [4] => application/octet-stream
+                    [5] => application/octet-stream
+                    [6] => application/octet-stream
+                    [7] => application/octet-stream
+                    [8] => application/octet-stream
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => /saetmp/868/radaronline/1404802634_3000974565/phpGqoZdK
+                    [1] => /saetmp/868/radaronline/1404802634_3000974565/phpcIDEly
+                    [2] => /saetmp/868/radaronline/1404802634_3000974565/phpoB8ktm
+                    [3] => /saetmp/868/radaronline/1404802634_3000974565/php0rF2Aa
+                    [4] => /saetmp/868/radaronline/1404802634_3000974565/phpcqYKIY
+                    [5] => /saetmp/868/radaronline/1404802634_3000974565/phpc53tQM
+                    [6] => /saetmp/868/radaronline/1404802634_3000974565/php8DPdYA
+                    [7] => /saetmp/868/radaronline/1404802634_3000974565/phpigdY5o
+                    [8] => /saetmp/868/radaronline/1404802634_3000974565/phpqE8Idd
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                    [2] => 0
+                    [3] => 0
+                    [4] => 0
+                    [5] => 0
+                    [6] => 0
+                    [7] => 0
+                    [8] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 18429
+                    [1] => 15514
+                    [2] => 8684
+                    [3] => 5919
+                    [4] => 3722
+                    [5] => 2023
+                    [6] => 674
+                    [7] => 429
+                    [8] => 352
+                )
+
+        )
+
+)
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2.bz2<pre><p>_SERVER<br>Array
+(
+    [MEF_PROXY_ADDR] => 10.67.15.11
+    [has_apphash] => 1
+    [ApplimitOutOfCon] => 0
+    [ApplimitOutOfMem] => 0
+    [SCRIPT_URL] => /post.php
+    [SCRIPT_URI] => http://radaronline.sinaapp.com/post.php
+    [HTTP_X_FORWARDED_FOR] => 123.9.229.217, 123.9.229.217
+    [HTTP_HOST] => radaronline.sinaapp.com
+    [HTTP_APPNAME] => radaronline
+    [HTTP_APPVERSION] => 1
+    [HTTP_ACCESSKEY] => zjnw4ylkm4
+    [HTTP_APPHASH] => 868
+    [HTTP_MYSQLPORT] => 0
+    [HTTP_APPCOOKIE] => default_version=1;debug=1;
+    [HTTP_APPSRVC] => 0000000000000000
+    [HTTP_CONNECTION] => close
+    [CONTENT_LENGTH] => 57719
+    [HTTP_ACCEPT] => */*
+    [CONTENT_TYPE] => multipart/form-data; boundary=------------------------2daf826f518e36bb
+    [PATH] => /bin:/usr/bin:/usr/ucb:/usr/bsd:/usr/local/bin
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache
+    [SERVER_NAME] => radaronline.sinaapp.com
+    [SERVER_ADDR] => 10.67.15.24
+    [SERVER_PORT] => 80
+    [REMOTE_ADDR] => 123.9.229.217
+    [DOCUMENT_ROOT] => /data1/www/htdocs/868/radaronline/1
+    [SERVER_ADMIN] => saesupport@sina.cn
+    [SCRIPT_FILENAME] => /data1/www/htdocs/868/radaronline/1/post.php
+    [REMOTE_PORT] => 29633
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.0
+    [REQUEST_METHOD] => POST
+    [QUERY_STRING] => 
+    [REQUEST_URI] => /post.php
+    [SCRIPT_NAME] => /post.php
+    [PHP_SELF] => /post.php
+    [REQUEST_TIME] => 1404802636
+    [HTTP_SECRETKEY] => Discarded
+)
+<p>_POST<br>Array
+(
+    [dataPostTime] => 2014-07-08 06:57:08
+    [radarBeginTime] => 2014-07-04 08:06:15
+    [radarEndTime] => 2014-07-04 08:12:02
+    [station] => sanmenxia
+)
+<p>_GET<br>Array
+(
+)
+<p>_FILES<br>Array
+(
+    [rfiles] => Array
+        (
+            [name] => Array
+                (
+                    [0] => 0.6datar.png
+                    [1] => 1.3datar.png
+                    [2] => 2.3datar.png
+                    [3] => 3.2datar.png
+                    [4] => 4.2datar.png
+                    [5] => 6.0datar.png
+                    [6] => 9.9datar.png
+                    [7] => 14.5datar.png
+                    [8] => 19.4datar.png
+                )
+
+            [type] => Array
+                (
+                    [0] => application/octet-stream
+                    [1] => application/octet-stream
+                    [2] => application/octet-stream
+                    [3] => application/octet-stream
+                    [4] => application/octet-stream
+                    [5] => application/octet-stream
+                    [6] => application/octet-stream
+                    [7] => application/octet-stream
+                    [8] => application/octet-stream
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => /saetmp/868/radaronline/1404802636_3821837327/phpsnuq8C
+                    [1] => /saetmp/868/radaronline/1404802636_3821837327/phpgAIgM7
+                    [2] => /saetmp/868/radaronline/1404802636_3821837327/phpYnG7pC
+                    [3] => /saetmp/868/radaronline/1404802636_3821837327/php60eZ36
+                    [4] => /saetmp/868/radaronline/1404802636_3821837327/phpyofRHB
+                    [5] => /saetmp/868/radaronline/1404802636_3821837327/phpuBBJl6
+                    [6] => /saetmp/868/radaronline/1404802636_3821837327/phpWAfCZA
+                    [7] => /saetmp/868/radaronline/1404802636_3821837327/php0DfvD5
+                    [8] => /saetmp/868/radaronline/1404802636_3821837327/phpiEwohA
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                    [2] => 0
+                    [3] => 0
+                    [4] => 0
+                    [5] => 0
+                    [6] => 0
+                    [7] => 0
+                    [8] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 18429
+                    [1] => 15514
+                    [2] => 8684
+                    [3] => 5919
+                    [4] => 3722
+                    [5] => 2023
+                    [6] => 674
+                    [7] => 429
+                    [8] => 352
+                )
+
+        )
+
+)
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2<pre><p>_SERVER<br>Array
+(
+    [MEF_PROXY_ADDR] => 10.67.15.12
+    [has_apphash] => 1
+    [ApplimitOutOfCon] => 0
+    [ApplimitOutOfMem] => 0
+    [SCRIPT_URL] => /post.php
+    [SCRIPT_URI] => http://radaronline.sinaapp.com/post.php
+    [HTTP_X_FORWARDED_FOR] => 123.9.229.217, 123.9.229.217
+    [HTTP_HOST] => radaronline.sinaapp.com
+    [HTTP_APPNAME] => radaronline
+    [HTTP_APPVERSION] => 1
+    [HTTP_ACCESSKEY] => zjnw4ylkm4
+    [HTTP_APPHASH] => 868
+    [HTTP_MYSQLPORT] => 0
+    [HTTP_APPCOOKIE] => default_version=1;debug=1;
+    [HTTP_APPSRVC] => 0000000000000000
+    [HTTP_CONNECTION] => close
+    [CONTENT_LENGTH] => 57719
+    [HTTP_ACCEPT] => */*
+    [CONTENT_TYPE] => multipart/form-data; boundary=------------------------1945bbaff5bc2d9b
+    [PATH] => /bin:/usr/bin:/usr/ucb:/usr/bsd:/usr/local/bin
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache
+    [SERVER_NAME] => radaronline.sinaapp.com
+    [SERVER_ADDR] => 10.67.15.24
+    [SERVER_PORT] => 80
+    [REMOTE_ADDR] => 123.9.229.217
+    [DOCUMENT_ROOT] => /data1/www/htdocs/868/radaronline/1
+    [SERVER_ADMIN] => saesupport@sina.cn
+    [SCRIPT_FILENAME] => /data1/www/htdocs/868/radaronline/1/post.php
+    [REMOTE_PORT] => 21530
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.0
+    [REQUEST_METHOD] => POST
+    [QUERY_STRING] => 
+    [REQUEST_URI] => /post.php
+    [SCRIPT_NAME] => /post.php
+    [PHP_SELF] => /post.php
+    [REQUEST_TIME] => 1404802663
+    [HTTP_SECRETKEY] => Discarded
+)
+<p>_POST<br>Array
+(
+    [dataPostTime] => 2014-07-08 06:57:35
+    [radarBeginTime] => 2014-07-04 08:06:15
+    [radarEndTime] => 2014-07-04 08:12:02
+    [station] => sanmenxia
+)
+<p>_GET<br>Array
+(
+)
+<p>_FILES<br>Array
+(
+    [rfiles] => Array
+        (
+            [name] => Array
+                (
+                    [0] => 0.6datar.png
+                    [1] => 1.3datar.png
+                    [2] => 2.3datar.png
+                    [3] => 3.2datar.png
+                    [4] => 4.2datar.png
+                    [5] => 6.0datar.png
+                    [6] => 9.9datar.png
+                    [7] => 14.5datar.png
+                    [8] => 19.4datar.png
+                )
+
+            [type] => Array
+                (
+                    [0] => application/octet-stream
+                    [1] => application/octet-stream
+                    [2] => application/octet-stream
+                    [3] => application/octet-stream
+                    [4] => application/octet-stream
+                    [5] => application/octet-stream
+                    [6] => application/octet-stream
+                    [7] => application/octet-stream
+                    [8] => application/octet-stream
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => /saetmp/868/radaronline/1404802663_4239049687/phpGl14xW
+                    [1] => /saetmp/868/radaronline/1404802663_4239049687/phpZDHRrB
+                    [2] => /saetmp/868/radaronline/1404802663_4239049687/phpeCuGlg
+                    [3] => /saetmp/868/radaronline/1404802663_4239049687/phpnLIvfV
+                    [4] => /saetmp/868/radaronline/1404802663_4239049687/phpG7jm9z
+                    [5] => /saetmp/868/radaronline/1404802663_4239049687/phpbyid3e
+                    [6] => /saetmp/868/radaronline/1404802663_4239049687/phpEht4WT
+                    [7] => /saetmp/868/radaronline/1404802663_4239049687/phprDWVQy
+                    [8] => /saetmp/868/radaronline/1404802663_4239049687/phpOPANKd
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                    [2] => 0
+                    [3] => 0
+                    [4] => 0
+                    [5] => 0
+                    [6] => 0
+                    [7] => 0
+                    [8] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 18429
+                    [1] => 15514
+                    [2] => 8684
+                    [3] => 5919
+                    [4] => 3722
+                    [5] => 2023
+                    [6] => 674
+                    [7] => 429
+                    [8] => 352
+                )
+
+        )
+
+)
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2.bz2<pre><p>_SERVER<br>Array
+(
+    [MEF_PROXY_ADDR] => 10.67.15.11
+    [has_apphash] => 1
+    [ApplimitOutOfCon] => 0
+    [ApplimitOutOfMem] => 0
+    [SCRIPT_URL] => /post.php
+    [SCRIPT_URI] => http://radaronline.sinaapp.com/post.php
+    [HTTP_X_FORWARDED_FOR] => 123.9.229.217, 123.9.229.217
+    [HTTP_HOST] => radaronline.sinaapp.com
+    [HTTP_APPNAME] => radaronline
+    [HTTP_APPVERSION] => 1
+    [HTTP_ACCESSKEY] => zjnw4ylkm4
+    [HTTP_APPHASH] => 868
+    [HTTP_MYSQLPORT] => 0
+    [HTTP_APPCOOKIE] => default_version=1;debug=1;
+    [HTTP_APPSRVC] => 0000000000000000
+    [HTTP_CONNECTION] => close
+    [CONTENT_LENGTH] => 57719
+    [HTTP_ACCEPT] => */*
+    [CONTENT_TYPE] => multipart/form-data; boundary=------------------------f5cb6b8af89a539e
+    [PATH] => /usr/local/sae/httpd/bin:/usr/bin:/bin
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache
+    [SERVER_NAME] => radaronline.sinaapp.com
+    [SERVER_ADDR] => 10.67.15.22
+    [SERVER_PORT] => 80
+    [REMOTE_ADDR] => 123.9.229.217
+    [DOCUMENT_ROOT] => /data1/www/htdocs/868/radaronline/1
+    [SERVER_ADMIN] => saesupport@sina.cn
+    [SCRIPT_FILENAME] => /data1/www/htdocs/868/radaronline/1/post.php
+    [REMOTE_PORT] => 49584
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.0
+    [REQUEST_METHOD] => POST
+    [QUERY_STRING] => 
+    [REQUEST_URI] => /post.php
+    [SCRIPT_NAME] => /post.php
+    [PHP_SELF] => /post.php
+    [REQUEST_TIME] => 1404802668
+    [HTTP_SECRETKEY] => Discarded
+)
+<p>_POST<br>Array
+(
+    [dataPostTime] => 2014-07-08 06:57:37
+    [radarBeginTime] => 2014-07-04 08:06:15
+    [radarEndTime] => 2014-07-04 08:12:02
+    [station] => sanmenxia
+)
+<p>_GET<br>Array
+(
+)
+<p>_FILES<br>Array
+(
+    [rfiles] => Array
+        (
+            [name] => Array
+                (
+                    [0] => 0.6datar.png
+                    [1] => 1.3datar.png
+                    [2] => 2.3datar.png
+                    [3] => 3.2datar.png
+                    [4] => 4.2datar.png
+                    [5] => 6.0datar.png
+                    [6] => 9.9datar.png
+                    [7] => 14.5datar.png
+                    [8] => 19.4datar.png
+                )
+
+            [type] => Array
+                (
+                    [0] => application/octet-stream
+                    [1] => application/octet-stream
+                    [2] => application/octet-stream
+                    [3] => application/octet-stream
+                    [4] => application/octet-stream
+                    [5] => application/octet-stream
+                    [6] => application/octet-stream
+                    [7] => application/octet-stream
+                    [8] => application/octet-stream
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => /saetmp/868/radaronline/1404802668_3206588463/phpVOlSP2
+                    [1] => /saetmp/868/radaronline/1404802668_3206588463/phpJ3Vg6K
+                    [2] => /saetmp/868/radaronline/1404802668_3206588463/phpnUGGmt
+                    [3] => /saetmp/868/radaronline/1404802668_3206588463/phpFn26Cb
+                    [4] => /saetmp/868/radaronline/1404802668_3206588463/phpFkRxTT
+                    [5] => /saetmp/868/radaronline/1404802668_3206588463/php9C7Y9B
+                    [6] => /saetmp/868/radaronline/1404802668_3206588463/phpnpHqqk
+                    [7] => /saetmp/868/radaronline/1404802668_3206588463/phpZUySG2
+                    [8] => /saetmp/868/radaronline/1404802668_3206588463/php7yIkXK
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                    [2] => 0
+                    [3] => 0
+                    [4] => 0
+                    [5] => 0
+                    [6] => 0
+                    [7] => 0
+                    [8] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 18429
+                    [1] => 15514
+                    [2] => 8684
+                    [3] => 5919
+                    [4] => 3722
+                    [5] => 2023
+                    [6] => 674
+                    [7] => 429
+                    [8] => 352
+                )
+
+        )
+
+)
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2post error occur: Could not resolve host: radaronline.sinaapp.com                                                                                                                                                                                                                 
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2.bz2post error occur: Could not resolve host: radaronline.sinaapp.com                                                                                                                                                                                                                 
+
+ waiting 5 seconds...
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2post error occur: Could not resolve host: radaronline.sinaapp.com                                                                                                                                                                                                                 
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2.bz2post error occur: Could not resolve host: radaronline.sinaapp.com                                                                                                                                                                                                                 
+
+ waiting 5 seconds...
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2post error occur: Could not resolve host: radaronline.sinaapp.com                                                                                                                                                                                                                 
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2.bz2post error occur: Could not resolve host: radaronline.sinaapp.com                                                                                                                                                                                                                 
+
+ waiting 5 seconds...
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2post error occur: Could not resolve host: radaronline.sinaapp.com                                                                                                                                                                                                                 
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2.bz2post error occur: Could not resolve host: radaronline.sinaapp.com                                                                                                                                                                                                                 
+
+ waiting 5 seconds...
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2post error occur: Could not resolve host: radaronline.sinaapp.com                                                                                                                                                                                                                 
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2.bz2post error occur: Could not resolve host: radaronline.sinaapp.com                                                                                                                                                                                                                 
+
+ waiting 5 seconds...
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2post error occur: Could not resolve host: radaronline.sinaapp.com                                                                                                                                                                                                                 
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2.bz2post error occur: Could not resolve host: radaronline.sinaapp.com                                                                                                                                                                                                                 
+
+ waiting 5 seconds...
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2post error occur: Could not resolve host: radaronline.sinaapp.com                                                                                                                                                                                                                 
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2.bz2post error occur: Could not resolve host: radaronline.sinaapp.com                                                                                                                                                                                                                 
+
+ waiting 5 seconds...
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2post error occur: Could not resolve host: radaronline.sinaapp.com                                                                                                                                                                                                                 
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2.bz2post error occur: Could not resolve host: radaronline.sinaapp.com                                                                                                                                                                                                                 
+
+ waiting 5 seconds...
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2post error occur: Could not resolve host: radaronline.sinaapp.com                                                                                                                                                                                                                 
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2.bz2post error occur: Could not resolve host: radaronline.sinaapp.com                                                                                                                                                                                                                 
+
+ waiting 5 seconds...
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2post error occur: Could not resolve host: radaronline.sinaapp.com                                                                                                                                                                                                                 
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2.bz2post error occur: Could not resolve host: radaronline.sinaapp.com                                                                                                                                                                                                                 
+
+ waiting 5 seconds...
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2post error occur: Could not resolve host: radaronline.sinaapp.com                                                                                                                                                                                                                 
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2.bz2post error occur: Could not resolve host: radaronline.sinaapp.com                                                                                                                                                                                                                 
+
+ waiting 5 seconds...
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2post error occur: Could not resolve host: radaronline.sinaapp.com                                                                                                                                                                                                                 
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2.bz2post error occur: Could not resolve host: radaronline.sinaapp.com                                                                                                                                                                                                                 
+
+ waiting 5 seconds...
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2post error occur: Could not resolve host: radaronline.sinaapp.com                                                                                                                                                                                                                 
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2.bz2post error occur: Could not resolve host: radaronline.sinaapp.com                                                                                                                                                                                                                 
+
+ waiting 5 seconds...
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2post error occur: Could not resolve host: radaronline.sinaapp.com                                                                                                                                                                                                                 
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2.bz2post error occur: Could not resolve host: radaronline.sinaapp.com                                                                                                                                                                                                                 
+
+ waiting 5 seconds...
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2post error occur: Could not resolve host: radaronline.sinaapp.com                                                                                                                                                                                                                 
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2.bz2post error occur: Could not resolve host: radaronline.sinaapp.com                                                                                                                                                                                                                 
+
+ waiting 5 seconds...
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2post error occur: Recv failure: Connection was aborted                                                                                                                                                                                                                            
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2.bz2post error occur: Recv failure: Connection was aborted                                                                                                                                                                                                                            
+
+ waiting 5 seconds...
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2post error occur: Recv failure: Connection was aborted                                                                                                                                                                                                                            
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2.bz2post error occur: Recv failure: Connection was aborted                                                                                                                                                                                                                            
+
+ waiting 5 seconds...
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2post error occur: Recv failure: Connection was aborted                                                                                                                                                                                                                            
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2.bz2post error occur: Recv failure: Connection was aborted                                                                                                                                                                                                                            
+
+ waiting 5 seconds...
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2<pre><p>_SERVER<br>Array
+(
+    [MEF_PROXY_ADDR] => 10.67.15.11
+    [has_apphash] => 1
+    [ApplimitOutOfCon] => 0
+    [ApplimitOutOfMem] => 0
+    [SCRIPT_URL] => /post.php
+    [SCRIPT_URI] => http://radaronline.sinaapp.com/post.php
+    [HTTP_X_FORWARDED_FOR] => 61.163.56.16, 61.163.56.16
+    [HTTP_HOST] => radaronline.sinaapp.com
+    [HTTP_APPNAME] => radaronline
+    [HTTP_APPVERSION] => 1
+    [HTTP_ACCESSKEY] => zjnw4ylkm4
+    [HTTP_APPHASH] => 868
+    [HTTP_MYSQLPORT] => 0
+    [HTTP_APPCOOKIE] => default_version=1;debug=1;
+    [HTTP_APPSRVC] => 0000000000000000
+    [HTTP_CONNECTION] => close
+    [CONTENT_LENGTH] => 57874
+    [HTTP_ACCEPT] => */*
+    [CONTENT_TYPE] => multipart/form-data; boundary=------------------------59b0f15c98f36c6b
+    [PATH] => /usr/local/sae/httpd/bin:/usr/bin:/bin
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache
+    [SERVER_NAME] => radaronline.sinaapp.com
+    [SERVER_ADDR] => 10.67.15.22
+    [SERVER_PORT] => 80
+    [REMOTE_ADDR] => 61.163.56.16
+    [DOCUMENT_ROOT] => /data1/www/htdocs/868/radaronline/1
+    [SERVER_ADMIN] => saesupport@sina.cn
+    [SCRIPT_FILENAME] => /data1/www/htdocs/868/radaronline/1/post.php
+    [REMOTE_PORT] => 45383
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.0
+    [REQUEST_METHOD] => POST
+    [QUERY_STRING] => 
+    [REQUEST_URI] => /post.php
+    [SCRIPT_NAME] => /post.php
+    [PHP_SELF] => /post.php
+    [REQUEST_TIME] => 1404806890
+    [HTTP_SECRETKEY] => Discarded
+)
+<p>_POST<br>Array
+(
+    [dataPostTime] => 2014-07-08 08:08:02
+    [elevsJson] => ["0.6","1.3","2.3","3.2","4.2","6.0","9.9","14.5","19.4"]
+    [radarBeginTime] => 2014-07-04 08:06:15
+    [radarEndTime] => 2014-07-04 08:12:02
+    [station] => sanmenxia
+)
+<p>_GET<br>Array
+(
+)
+<p>_FILES<br>Array
+(
+    [rfiles] => Array
+        (
+            [name] => Array
+                (
+                    [0] => 0.6datar.png
+                    [1] => 1.3datar.png
+                    [2] => 2.3datar.png
+                    [3] => 3.2datar.png
+                    [4] => 4.2datar.png
+                    [5] => 6.0datar.png
+                    [6] => 9.9datar.png
+                    [7] => 14.5datar.png
+                    [8] => 19.4datar.png
+                )
+
+            [type] => Array
+                (
+                    [0] => application/octet-stream
+                    [1] => application/octet-stream
+                    [2] => application/octet-stream
+                    [3] => application/octet-stream
+                    [4] => application/octet-stream
+                    [5] => application/octet-stream
+                    [6] => application/octet-stream
+                    [7] => application/octet-stream
+                    [8] => application/octet-stream
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => /saetmp/868/radaronline/1404806890_2243152257/phpyDcnOb
+                    [1] => /saetmp/868/radaronline/1404806890_2243152257/phpp3Dldk
+                    [2] => /saetmp/868/radaronline/1404806890_2243152257/phpebklCs
+                    [3] => /saetmp/868/radaronline/1404806890_2243152257/php12Nl1A
+                    [4] => /saetmp/868/radaronline/1404806890_2243152257/phpeVRmqJ
+                    [5] => /saetmp/868/radaronline/1404806890_2243152257/phpjpqoPR
+                    [6] => /saetmp/868/radaronline/1404806890_2243152257/php0Spqe0
+                    [7] => /saetmp/868/radaronline/1404806890_2243152257/php1uLsD8
+                    [8] => /saetmp/868/radaronline/1404806890_2243152257/phpsxwv2g
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                    [2] => 0
+                    [3] => 0
+                    [4] => 0
+                    [5] => 0
+                    [6] => 0
+                    [7] => 0
+                    [8] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 18429
+                    [1] => 15514
+                    [2] => 8684
+                    [3] => 5919
+                    [4] => 3722
+                    [5] => 2023
+                    [6] => 674
+                    [7] => 429
+                    [8] => 352
+                )
+
+        )
+
+)
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2.bz2<pre><p>_SERVER<br>Array
+(
+    [MEF_PROXY_ADDR] => 10.67.15.11
+    [has_apphash] => 1
+    [ApplimitOutOfCon] => 0
+    [ApplimitOutOfMem] => 0
+    [SCRIPT_URL] => /post.php
+    [SCRIPT_URI] => http://radaronline.sinaapp.com/post.php
+    [HTTP_X_FORWARDED_FOR] => 61.163.56.16, 61.163.56.16
+    [HTTP_HOST] => radaronline.sinaapp.com
+    [HTTP_APPNAME] => radaronline
+    [HTTP_APPVERSION] => 1
+    [HTTP_ACCESSKEY] => zjnw4ylkm4
+    [HTTP_APPHASH] => 868
+    [HTTP_MYSQLPORT] => 0
+    [HTTP_APPCOOKIE] => default_version=1;debug=1;
+    [HTTP_APPSRVC] => 0000000000000000
+    [HTTP_CONNECTION] => close
+    [CONTENT_LENGTH] => 57874
+    [HTTP_ACCEPT] => */*
+    [CONTENT_TYPE] => multipart/form-data; boundary=------------------------bfae82100029f5c6
+    [PATH] => /usr/local/sae/httpd/bin:/usr/bin:/bin
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache
+    [SERVER_NAME] => radaronline.sinaapp.com
+    [SERVER_ADDR] => 10.67.15.22
+    [SERVER_PORT] => 80
+    [REMOTE_ADDR] => 61.163.56.16
+    [DOCUMENT_ROOT] => /data1/www/htdocs/868/radaronline/1
+    [SERVER_ADMIN] => saesupport@sina.cn
+    [SCRIPT_FILENAME] => /data1/www/htdocs/868/radaronline/1/post.php
+    [REMOTE_PORT] => 52036
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.0
+    [REQUEST_METHOD] => POST
+    [QUERY_STRING] => 
+    [REQUEST_URI] => /post.php
+    [SCRIPT_NAME] => /post.php
+    [PHP_SELF] => /post.php
+    [REQUEST_TIME] => 1404806893
+    [HTTP_SECRETKEY] => Discarded
+)
+<p>_POST<br>Array
+(
+    [dataPostTime] => 2014-07-08 08:08:05
+    [elevsJson] => ["0.6","1.3","2.3","3.2","4.2","6.0","9.9","14.5","19.4"]
+    [radarBeginTime] => 2014-07-04 08:06:15
+    [radarEndTime] => 2014-07-04 08:12:02
+    [station] => sanmenxia
+)
+<p>_GET<br>Array
+(
+)
+<p>_FILES<br>Array
+(
+    [rfiles] => Array
+        (
+            [name] => Array
+                (
+                    [0] => 0.6datar.png
+                    [1] => 1.3datar.png
+                    [2] => 2.3datar.png
+                    [3] => 3.2datar.png
+                    [4] => 4.2datar.png
+                    [5] => 6.0datar.png
+                    [6] => 9.9datar.png
+                    [7] => 14.5datar.png
+                    [8] => 19.4datar.png
+                )
+
+            [type] => Array
+                (
+                    [0] => application/octet-stream
+                    [1] => application/octet-stream
+                    [2] => application/octet-stream
+                    [3] => application/octet-stream
+                    [4] => application/octet-stream
+                    [5] => application/octet-stream
+                    [6] => application/octet-stream
+                    [7] => application/octet-stream
+                    [8] => application/octet-stream
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => /saetmp/868/radaronline/1404806893_3882854821/phpZFmn1i
+                    [1] => /saetmp/868/radaronline/1404806893_3882854821/phpTCtlDy
+                    [2] => /saetmp/868/radaronline/1404806893_3882854821/phpNFGkfO
+                    [3] => /saetmp/868/radaronline/1404806893_3882854821/phpngOkR3
+                    [4] => /saetmp/868/radaronline/1404806893_3882854821/phpDdNltj
+                    [5] => /saetmp/868/radaronline/1404806893_3882854821/phplkgn5y
+                    [6] => /saetmp/868/radaronline/1404806893_3882854821/phpDh9oHO
+                    [7] => /saetmp/868/radaronline/1404806893_3882854821/phpzztrj4
+                    [8] => /saetmp/868/radaronline/1404806893_3882854821/phpLBauVj
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                    [2] => 0
+                    [3] => 0
+                    [4] => 0
+                    [5] => 0
+                    [6] => 0
+                    [7] => 0
+                    [8] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 18429
+                    [1] => 15514
+                    [2] => 8684
+                    [3] => 5919
+                    [4] => 3722
+                    [5] => 2023
+                    [6] => 674
+                    [7] => 429
+                    [8] => 352
+                )
+
+        )
+
+)
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2.bz2
+<br />
+<b>Parse error</b>:  syntax error, unexpected '[' in <b>service/deal.request.php</b> on line <b>31</b><br />
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2.bz2
+<br />
+<b>Fatal error</b>:  Call to undefined function upload() in <b>service/deal.request.php</b> on line <b>34</b><br />
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2.bz2
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2.bz2
+INSERT REPLACE INTO  radarpng (radarBeginTime, radarEndTime, postTime, station, elevs) VALUES ('2014-07-04 08:06:15', '2014-07-04 08:12:02', '2014-07-08 09:24:34', 'sanmenxia', '["0.6","1.3","2.3","3.2","4.2","6.0","9.9","14.5","19.4"]' )<br>sanmenxia/2014-07-04/rf/08:06:15-0.6datar.png<br>sanmenxia/2014-07-04/rf/08:06:15-1.3datar.png<br>sanmenxia/2014-07-04/rf/08:06:15-2.3datar.png<br>sanmenxia/2014-07-04/rf/08:06:15-3.2datar.png<br>sanmenxia/2014-07-04/rf/08:06:15-4.2datar.png<br>sanmenxia/2014-07-04/rf/08:06:15-6.0datar.png<br>sanmenxia/2014-07-04/rf/08:06:15-9.9datar.png<br>sanmenxia/2014-07-04/rf/08:06:15-14.5datar.png<br>sanmenxia/2014-07-04/rf/08:06:15-19.4datar.png
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+           version 1.0 20140708 radarpng upload
+-----------------------------------------------------
+
+
+           version 1.0 20140708 radarpng upload
+-----------------------------------------------------
+
+
+           version 1.0 20140708 radarpng upload
+-----------------------------------------------------
+
+
+           version 1.0 20140708 radarpng upload
+-----------------------------------------------------
+
+
+           version 1.0 20140708 radarpng upload
+-----------------------------------------------------
+
+
+           version 1.0 20140708 radarpng upload
+-----------------------------------------------------
+
+sanmenxia 
+           version 1.0 20140708 radarpng upload
+-----------------------------------------------------
+
+sanmenxia luoyang 
+           version 1.0 20140708 radarpng upload
+-----------------------------------------------------
+
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+           version 1.0 20140708 radarpng upload
+-----------------------------------------------------
+
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+           version 1.0 20140708 radarpng upload
+-----------------------------------------------------
+
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+           version 1.0 20140708 radarpng upload
+-----------------------------------------------------
+
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2.bz2
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+           version 1.0 20140708 radarpng upload
+-----------------------------------------------------
+
+
+发现新文件:dirtest\Z_RADR_I_Z9377_20130502075700_O_DOR_SB_CAP.bin
+
+成功处理文件:dirtest\Z_RADR_I_Z9377_20130502075700_O_DOR_SB_CAP.bin ！ 
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2
+
+成功处理文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2 ！ 
+
+发现新文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2.bz2
+
+成功处理文件:dirtest\Z_RADR_I_Z9398_20140704080600_O_DOR_SB_CAP.bin2.bz2 ！ 
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...
+
+ waiting 5 seconds...

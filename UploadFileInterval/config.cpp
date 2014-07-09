@@ -5,6 +5,8 @@
 #include "Poco/DateTimeFormatter.h"
 #include "Poco/DateTimeFormat.h"
 
+Logout applog("logtest.txt");
+
 std::string getLastTimeStr(const std::string & dir)
 {
 	Poco::AutoPtr<Poco::Util::XMLConfiguration>
@@ -45,6 +47,25 @@ std::string getScanPath(const std::string & dir)
 	return pConf->getString("path." + dir, "dirtest/*.txt");
 }
 
+std::vector<std::string>& getScanStations(std::vector<std::string>& vec)
+{
+	Poco::AutoPtr<Poco::Util::XMLConfiguration>
+		pConf(new Poco::Util::XMLConfiguration("radar-config.xml"));
+
+	//"dirtest/*.txt";
+	int count = pConf->getInt("scanstations.count", 1);
+
+	for (int i = 0; i != count; i++)
+	{
+		std::string id = "scanstations.station[" + to_string(i) + "]";
+		vec.push_back(pConf->getString(id));
+
+		//applog << vec[i] << ' ';
+	}
+
+	return vec;
+}
+
 std::string getUploadUrl()
 {
 	Poco::AutoPtr<Poco::Util::XMLConfiguration>
@@ -78,7 +99,12 @@ Poco::DateTime get_datatime(int days, int milliseconds)
 {
 	Poco::DateTime begin(Poco::Timestamp(0));
 
-	int hours = milliseconds / (3600 * 1000),
-		microseconds = (milliseconds % (3600 * 1000)) * 1000;
-	return begin + Poco::Timespan(days - 1, hours, 0, 0, microseconds);
+	int hours = milliseconds / (3600 * 1000), minutes, microseconds;
+
+	milliseconds %= (3600 * 1000);
+	minutes = milliseconds / (60 * 1000);
+	milliseconds %= (60 * 1000);
+	microseconds = milliseconds * 1000;
+
+	return begin + Poco::Timespan(days - 1, hours, minutes, 0, microseconds);
 }

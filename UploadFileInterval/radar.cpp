@@ -36,10 +36,10 @@ bool read_bz2_file(const std::string& filename, SA_SB_Info& radar)
 	bsread.bzalloc = NULL;
 	bsread.bzfree = NULL;
 	bsread.opaque = NULL;
- 
+
 	//第二个参数设置解压状态输出 设为0不输出内部状态
 	int error = BZ2_bzDecompressInit(&bsread, 0, 0);
-	//std::cout << "BZ2_bzDecompressInit return code:" << error << std::endl;
+	//std::cout << "BZ2_bzDecompressInit return code:" << error << '\n';
 
 	int ret, last_total_out = 0;
 
@@ -63,7 +63,7 @@ bool read_bz2_file(const std::string& filename, SA_SB_Info& radar)
 		}
 		else
 		{
-			std::cout << "\n BZ2_bzDecompress error code:" << ret << std::endl;
+			applog << "\n BZ2_bzDecompress error code:" << ret << '\n';
 			return false;
 		}
 
@@ -74,14 +74,14 @@ bool read_bz2_file(const std::string& filename, SA_SB_Info& radar)
 
 	radar.init_elevs();
 
-	std::cout << "sizeof(RadarBaseData):" << sizeof(SA_SB_Info::SB_Base) << std::endl;
-	std::cout << "date_begin:" << radar.date_begin << " date_end:" << radar.date_end << std::endl;
-	std::cout << "seconds_begin:" << radar.seconds_begin << " seconds_end:" << radar.seconds_begin << std::endl;
+	//std::cout << "sizeof(RadarBaseData):" << sizeof(SA_SB_Info::SB_Base) << '\n';
+	//std::cout << "date_begin:" << radar.date_begin << " date_end:" << radar.date_end << '\n';
+	//std::cout << "seconds_begin:" << radar.seconds_begin << " seconds_end:" << radar.seconds_begin << '\n';
 
-	std::ofstream fout("log2.txt");
+	//std::ofstream fout("log2.txt");
 
-	radar.out_info(fout);
-	fout.close();
+	//radar.out_info(fout);
+	//fout.close();
 
 	return true;
 
@@ -95,9 +95,9 @@ void read_base_data()
 
 	radar.read_base_data(filename);
 
-	std::cout << "sizeof(RadarBaseData):" << sizeof(SA_SB_Info::SB_Base) << std::endl;
-	std::cout << "date_begin:" << radar.date_begin << " date_end:" << radar.date_end << std::endl;
-	std::cout << "seconds_begin:" << radar.seconds_begin << " seconds_end:" << radar.seconds_begin << std::endl;
+	applog << "sizeof(RadarBaseData):" << sizeof(SA_SB_Info::SB_Base) << '\n';
+	applog << "date_begin:" << radar.date_begin << " date_end:" << radar.date_end << '\n';
+	applog << "seconds_begin:" << radar.seconds_begin << " seconds_end:" << radar.seconds_begin << '\n';
 
 	std::ofstream fout("log1.txt");
 
@@ -110,9 +110,9 @@ bool save_png_data(const RadarElevation &el, const std::string &filename)
 {
 	CImg<unsigned char> img(360, el.r_gate_count, 1, 1, 0);
 
-	for (std::size_t i = 0; i<el.r.size(); i++)//方位角
+	for (std::size_t i = 0; i < el.r.size(); i++)//方位角
 	{
-		for (std::size_t j = 0; j<el.r[i].size(); j++)//第j个库
+		for (std::size_t j = 0; j < el.r[i].size(); j++)//第j个库
 		{
 			int ref = int(el.r[i][j] + 0.5);
 			unsigned char val;
@@ -136,16 +136,16 @@ bool generate_pngdata(Poco::File& cur, UploadInfo& upinfo)
 	SA_SB_Info radar;
 	std::string pathstr = cur.path();
 
-	Poco::Path curpath( pathstr );
+	Poco::Path curpath(pathstr);
 	if (curpath.getExtension() == "bz2")
 	{
-		if(! read_bz2_file(pathstr, radar) ) return false;
+		if (!read_bz2_file(pathstr, radar)) return false;
 	}
 	else
 	{
 		if (!radar.read_base_data(pathstr))
 		{
-			std::cout << "\n read radar base data error!:" << std::endl;
+			applog << "\n read radar base data error!:" << '\n';
 			return false;
 		}
 	}
@@ -160,8 +160,8 @@ bool generate_pngdata(Poco::File& cur, UploadInfo& upinfo)
 	{
 		if (it->second.r_valid)
 		{
-			std::string outname = getPngOutDir()+'/' + it->first + "datar.png";
-			
+			std::string outname = getPngOutDir() + '/' + it->first + "datar.png";
+
 			save_png_data(it->second, outname);
 
 			upinfo.elevs.push_back(it->first);

@@ -12,24 +12,14 @@
 
 #include <iostream>
 #include <string>
-#include <sstream>
+
 #include <algorithm>
 
 
-template <typename T>
-std::string to_string(const T& org)
+bool check_file(Poco::File& cur, const std::string & station)
 {
-	std::string des;
-	std::ostringstream sout;
-
-	sout << org;
-	return des = sout.str();
-}
-
-bool check_file(Poco::File& cur)
-{
-	std::string ltime = getLastTimeStr("sanmenxia");
-	if (to_string(cur.getLastModified().epochTime() ) > ltime) return true;
+	std::string ltime = getLastTimeStr(station);
+	if (to_string(cur.getLastModified().epochTime()) > ltime) return true;
 
 	return false;
 }
@@ -44,7 +34,7 @@ bool CmpByLastModified(const std::string& left,
 
 }
 
-bool handle_file(Poco::File& cur, const std::string & dir)
+bool handle_file(Poco::File& cur, const std::string & station)
 {
 	using Poco::DateTime; using Poco::DateTimeFormat; using Poco::DateTimeFormatter;
 
@@ -52,25 +42,37 @@ bool handle_file(Poco::File& cur, const std::string & dir)
 	UploadInfo upinfo;
 	result = result && generate_pngdata(cur, upinfo);
 
-	DateTime begin = get_datatime(upinfo.date_begin, upinfo.seconds_begin), 
+	if (!result) return false;
+
+	DateTime begin = get_datatime(upinfo.date_begin, upinfo.seconds_begin),
 		end = get_datatime(upinfo.date_end, upinfo.seconds_end);
 
-	
+
 	upinfo.post_form["radarBeginTime"] = DateTimeFormatter::format(begin, DateTimeFormat::SORTABLE_FORMAT);
 	upinfo.post_form["radarEndTime"] = DateTimeFormatter::format(end, DateTimeFormat::SORTABLE_FORMAT);
 
 	upinfo.post_form["dataPostTime"] = DateTimeFormatter::format(DateTime(), DateTimeFormat::SORTABLE_FORMAT);
-	upinfo.post_form["station"] = dir;
-	
+	upinfo.post_form["station"] = station;
+
+	auto it = upinfo.elevs.begin();
+	std::string json("[");
+	for (json += '"'+ *it + '"', it++; it != upinfo.elevs.end(); it++)
+	{
+		json += ",\"" + *it + '"';
+	}
+
+	json += ']';
+	upinfo.post_form["elevsJson"] = json;
+
 	result = result && post_file(upinfo);
 
 	return result;
 }
 
-void scan_dir(const std::string & dir)
+void scan_station(const std::string & station)
 {
 	//"dirtest/*.txt";
-	std::string path = getScanPath(dir);
+	std::string path = getScanPath(station);
 
 
 	using Poco::Glob;
@@ -88,13 +90,18 @@ void scan_dir(const std::string & dir)
 	{
 		Poco::File cur(*it2);
 
-		if (check_file(cur))
+		if (check_file(cur, station))
 		{
-			std::cout << "\n发现新文件:" << cur.path();
-			
-			if (handle_file(cur, dir))
+			applog << "\n发现新文件:" << cur.path()<<"\n";
+
+			if (handle_file(cur, station))
 			{
-				setLastTimeStr("sanmenxia", to_string(cur.getLastModified().epochTime() ) );
+				setLastTimeStr(station, to_string(cur.getLastModified().epochTime()));
+				applog << "\n成功处理文件:" << cur.path() << " ！ \n";
+			}
+			else
+			{
+				applog << "\n文件:" << cur.path() << "处理失败！ \n";
 			}
 		}
 
@@ -102,29 +109,58 @@ void scan_dir(const std::string & dir)
 
 }
 
-int main()
+int start()
 {
 	curl_global_init(CURL_GLOBAL_ALL);
-	
+
+	applog << "\n           version 1.0 20140708 radarpng upload";
+	applog << "\n-----------------------------------------------------\n\n";
+
+	std::vector<std::string> stations;
+
 	while (true)
 	{
 		try
 		{
-			scan_dir("sanmenxia");
+			stations.clear();
+			
+			getScanStations(stations); 
+			
+			for (auto it = stations.begin(); it != stations.end(); it++)
+			{
+				scan_station(*it);
+			}
+			
 		}
 		catch (Poco::Exception &exc)
 		{
-			std::cout << "\n exc:" << exc.displayText();
+			applog << "\n exc:" << exc.displayText();
 		}
 		catch (...)
 		{
 		}
 
 		int wait = 5;
-		std::cout << "\n waiting " << wait << " seconds...\n";
+		applog << "\n waiting " << wait << " seconds...\n";
 		Poco::Thread::sleep(1000 * wait);
 	}
 
 	curl_global_cleanup();
+	return 0;
+}
+
+int main()
+{
+	start();
+}
+
+int APIENTRY WinMain(HINSTANCE hInstance,
+	HINSTANCE hPrevInstance,
+	LPSTR    lpCmdLine,
+	int       cmdShow)
+{
+
+	start();
+
 	return 0;
 }
