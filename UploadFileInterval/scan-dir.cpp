@@ -81,28 +81,34 @@ void scan_station(const std::string & station)
 
 	Glob::glob(path.c_str(), files);
 
+	std::vector<Poco::File> vfiles(files.rbegin(), files.rend());
 
-	std::vector<std::string> vfiles(files.begin(), files.end());
+	std::string ltime = getLastTimeStr(station);
 
-	std::sort(vfiles.begin(), vfiles.end(), CmpByLastModified);
-
-	for (auto it2 = vfiles.begin(); it2 != vfiles.end(); ++it2)
+	for (auto it = vfiles.begin(); it != vfiles.end(); ++it)
 	{
-		Poco::File cur(*it2);
-
-		if (check_file(cur, station))
+		if (to_string(it->getLastModified().epochTime()) <= ltime)
 		{
-			applog << "\n发现新文件:" << cur.path()<<"\n";
+			vfiles.resize(it - vfiles.begin());
+			break;
+		}
+	}
 
-			if (handle_file(cur, station))
-			{
-				setLastTimeStr(station, to_string(cur.getLastModified().epochTime()));
-				applog << "\n成功处理文件:" << cur.path() << " ！ \n";
-			}
-			else
-			{
-				applog << "\n文件:" << cur.path() << "处理失败！ \n";
-			}
+
+	for (auto it = vfiles.rbegin(); it != vfiles.rend(); ++it)
+	{
+		Poco::File &cur = *it;
+
+		applog << '\n' << getCurDateTimeStr() << " 发现新文件:" << cur.path() << "\n";
+
+		if (handle_file(cur, station))
+		{
+			setLastTimeStr(station, to_string(cur.getLastModified().epochTime()));
+			applog << '\n' << getCurDateTimeStr() << " 成功处理文件:" << cur.path() << " ！ \n";
+		}
+		else
+		{
+			applog << '\n' << getCurDateTimeStr() << " 文件:" << cur.path() << "处理失败！ \n";
 		}
 
 	}
@@ -113,7 +119,7 @@ int start()
 {
 	curl_global_init(CURL_GLOBAL_ALL);
 
-	applog << "\n           version 1.0 20140708 radarpng upload";
+	applog << "\n           version 1.1 20140710 radarpng upload";
 	applog << "\n-----------------------------------------------------\n\n";
 
 	std::vector<std::string> stations;

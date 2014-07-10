@@ -34,7 +34,7 @@ std::string getScanPath(const std::string & dir);
 std::string getUploadUrl();
 std::string getProxy();
 std::string getPngOutDir();
-
+std::string getCurDateTimeStr();
 
 struct UploadInfo{
 	std::vector<std::string> elevs, rfiles, vfiles;

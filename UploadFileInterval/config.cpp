@@ -108,3 +108,12 @@ Poco::DateTime get_datatime(int days, int milliseconds)
 
 	return begin + Poco::Timespan(days - 1, hours, minutes, 0, microseconds);
 }
+
+std::string getCurDateTimeStr()
+{
+	using Poco::DateTime; using Poco::DateTimeFormat; using Poco::DateTimeFormatter;
+
+	//"dirtest/*.txt";
+	return DateTimeFormatter::format(DateTime(), DateTimeFormat::SORTABLE_FORMAT);
+
+}
